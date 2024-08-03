@@ -1,0 +1,468 @@
+body {
+    position: relative; /* Establish a containing block for absolute positioning */
+    height: 600px; /* Ensure the container is tall enough */
+    margin: 0; /* Remove default margin */
+}
+
+.sky {
+    width: 100%;
+    height: 300px; /* Set a fixed height */
+    position: relative;
+    overflow: hidden;
+    background: #000000; /* Initial background color */
+    animation: fadeBackground 100s linear infinite; /* Loop animation infinitely */
+}
+
+@keyframes fadeBackground {
+    0% {
+        background-color: #3aa6ff; /* Transition back to light blue */
+    }
+    50% {
+        background-color: #003f91; /* Transition to a light blue */
+    }
+    55% {
+        background-color: #ff7e06; /* Transition to a light blue */
+    }
+    65% {
+        background-color: #000000; /* Return to start color */
+    }
+    100% {
+        background-color: #3aa6ff; /* Transition to a light blue */
+    }
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    top: 5%; /* Set a fixed height */
+    color:#000000;
+    position: relative;
+    font-size: 3em;
+    z-index: 1;
+    animation: changeWhite 100s linear infinite; /* Loop animation infinitely */
+}
+
+@keyframes changeWhite {
+    0% {
+        color: #001368; /* Transition back to light blue */
+    }
+    50% {
+        color: #020018; /* Transition to a light blue */
+    }
+    55% {
+        color: #fffc51; /* Transition to a light blue */
+    }
+    65% {
+        color: #ffffff; /* Return to start color */
+    }
+    100% {
+        color: #1f1f1f; /* Transition to a light blue */
+    }
+}
+
+.cloud {
+    width: 100px; /* Set the width of the cloud */
+    height: 60px; /* Set the height of the cloud */
+    background: white;
+    border-radius: 50%; /* Make it round */
+    position: absolute;
+    top: 50px; /* Adjust the position as needed */
+    left: -100px; /* Start position off-screen */
+    animation: moveClouds 100s linear infinite; /* Animation duration and repeat */
+}
+
+@keyframes moveClouds {
+    0% {
+        left: -100px; /* Start off-screen to the left */
+    }
+    50% {
+        background-color: #ffffffe5; /* Transition to a light blue */
+    }
+    55% {
+        background-color: #ffc628f5; /* Transition to a light blue */
+    }
+    65% {
+        background-color: #000000d8; /* Return to start color */
+    }
+    100% {
+        left: 100%; /* End off-screen to the right */
+
+    }
+}
+
+.sun {
+    width: 50px; /* Set the width of the sun */
+    height: 50px; /* Set the height of the sun */
+    background: rgb(255, 251, 190);
+    border-radius: 50%; /* Make it round */
+    position: absolute;
+    right: 50px; /* Start position horizontally */
+    top: -100px; /* Start off-screen above the viewport */
+    animation: moveSun 100s linear infinite; /* Animation duration and repeat */
+    z-index: 0;
+}
+
+@keyframes moveSun {
+    0% {
+        right: 50px; /* Start position horizontally */
+        top: -100px; /* Start off-screen above the viewport */
+    }
+    100% {
+        right: 100%; /* End position horizontally */
+        top: 200%; /* Move to the bottom of the viewport */
+        transform: translateX(-50%); /* Adjust alignment if needed */
+    }
+}
+
+.mountain1 {
+    position: absolute;
+    top: 200px;
+    left: 10%;
+    width: 0; /* No width needed */
+    height: 0; /* No height needed */
+    border-left: 170px solid transparent; /* Left border */
+    border-right: 150px solid transparent; /* Right border */
+    border-bottom: 100px solid #8B4513; /* Bottom border (mountain color) */
+    animation: fadeMountain 100s linear infinite;
+}
+
+.mountain2 {
+    position: absolute;
+    top: 210px;
+    left: 90%;
+    width: 0; /* No width needed */
+    height: 0; /* No height needed */
+    border-left: 150px solid transparent; /* Left border */
+    border-right: 170px solid transparent; /* Right border */
+    border-bottom: 120px solid #8B4513; /* Bottom border (mountain color) */
+    animation: fadeMountain 100s linear infinite;
+}
+
+.mountain3 {
+    position: absolute;
+    top: 180px;
+    left: 15%;
+    width: 0; /* No width needed */
+    height: 0; /* No height needed */
+    border-left: 180px solid transparent; /* Left border */
+    border-right: 145px solid transparent; /* Right border */
+    border-bottom: 130px solid #8B4513; /* Bottom border (mountain color) */
+    animation: fadeMountain 100s linear infinite;
+}
+
+@keyframes fadeMountain {
+    0% {
+        border-bottom: 130px solid #4b371d;; /* Transition back to light blue */
+    }
+    50% {
+        border-bottom: 130px solid #0a0908; /* Transition to a light blue */
+    }
+    55% {
+        border-bottom: 130px solid #ff4517; /* Transition to a light blue */
+    }
+    65% {
+        border-bottom: 130px solid #0a0908; /* Return to start color */
+    }
+    100% {
+        border-bottom: 130px solid #4b371d; /* Transition to a light blue */
+    }
+}
+
+.grass {
+    width: 100%;
+    top: 300px;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    overflow: hidden;
+    animation: fadeGrass 100s linear infinite;
+}
+
+@keyframes fadeGrass {
+    0% {
+        background-color: green;
+    }
+    50% {
+        background-color: rgb(0, 36, 37);
+    }
+    55% {
+        background-color: rgb(163, 160, 0);
+    }
+    65% {
+        background-color: rgb(0, 36, 37);
+    }
+    100% {
+        background-color: green;
+    }
+}
+
+.tree1 {
+    right: 20%; /* Center horizontally based on parent width */
+    top: 200px;
+    width: 100px; /* Set a width for the building */
+    position: fixed; /* Use relative positioning */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    padding: 10px; /* Internal padding */
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.tree2 {
+    right: 10%; /* Center horizontally based on parent width */
+    top: 210px;
+    width: 100px; /* Set a width for the building */
+    position: fixed; /* Use relative positioning */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    padding: 10px; /* Internal padding */
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.tree3 {
+    right: 5%; /* Center horizontally based on parent width */
+    top: 190px;
+    width: 100px; /* Set a width for the building */
+    position: fixed; /* Use relative positioning */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    padding: 10px; /* Internal padding */
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.tree4 {
+    left: 13%; /* Center horizontally based on parent width */
+    top: 200px;
+    width: 100px; /* Set a width for the building */
+    position: fixed; /* Use relative positioning */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    padding: 10px; /* Internal padding */
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.treetop{
+    width: 0; /* No width needed */
+    height: 0; /* No height needed */
+    border-left: 15px solid transparent; /* Left border */
+    border-right: 15px solid transparent; /* Right border */
+    border-bottom: 150px solid #00a30e; /* Bottom border (mountain color) */
+    animation: fadetreeTop 100s linear infinite;
+}
+
+.treetrunk{
+    width: 10px;
+    height: 5px;
+    background-color: #8B4513;
+    animation: fadetreeTrunk 100s linear infinite;
+}
+
+@keyframes fadetreeTop {
+    0% {
+        border-bottom: 150px solid #00a30e;
+    }
+    50% {
+        border-bottom: 150px solid rgb(0, 54, 56);
+    }
+    55% {
+        border-bottom: 150px solid rgb(209, 171, 0);
+    }
+    65% {
+        border-bottom: 150px solid rgb(0, 54, 56);
+    }
+    100% {
+        border-bottom: 150px solid #00a30e;
+    }
+}
+
+@keyframes fadetreeTrunk {
+    0% {
+        background-color: #8B4513;
+    }
+    50% {
+        background-color: rgb(37, 6, 0);
+    }
+    55% {
+        background-color: rgb(58, 57, 0);
+    }
+    65% {
+        background-color: rgb(37, 6, 0);
+    }
+    100% {
+        background-color: #8B4513;
+    }
+}
+
+.path-horizontal {
+    width: 100%; /* Make it span the full width */
+    height: 40px; /* Height of the horizontal path */
+    background-color: rgb(190, 180, 135);
+    position: fixed; /* Use absolute positioning */
+    top: 580px; /* Adjust as needed */
+    left: 0; /* Position it on the left side */
+    overflow: hidden;
+    animation: fadePath 100s linear infinite;
+}
+
+.path-vertical {
+    width: 50px; /* Width of the vertical path */
+    height: 190px; /* Height of the vertical path */
+    background-color: rgb(190, 180, 135);
+    position: fixed; /* Use absolute positioning */
+    top: 400px; /* Adjust as needed */
+    left: 50%; /* Center horizontally based on parent width */
+    transform: translateX(-50%);
+    overflow: hidden;
+    z-index: 1;
+    animation: fadePath 100s linear infinite;
+}
+
+@keyframes fadePath {
+    0% {
+        background-color: rgb(228, 230, 134);
+    }
+    50% {
+        background-color: rgb(37, 52, 100);
+    }
+    55% {
+        background-color: rgb(255, 222, 203);
+    }
+    65% {
+        background-color: rgb(37, 52, 100);
+    }
+    100% {
+        background-color: rgb(228, 230, 134);
+    }
+}
+
+.building {
+    left: 50%; /* Center horizontally based on parent width */
+    transform: translateX(-50%);
+    top: 150px;
+    width: 300px; /* Set a width for the building */
+    position: fixed; /* Use relative positioning */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #e7e7e7;
+    padding: 10px; /* Internal padding */
+    border-radius: 3px;
+    z-index: 2;
+    animation: fadeBuilding 100s linear infinite;
+}
+
+@keyframes fadeBuilding {
+    0% {
+        background-color: #a3a3a3;; /* Transition back to light blue */
+    }
+    50% {
+        background-color: #6d7e94; /* Transition to a light blue */
+    }
+    55% {
+        background-color: #e6bc96; /* Transition to a light blue */
+    }
+    65% {
+        background-color: #718399; /* Return to start color */
+    }
+    100% {
+        background-color: #a3a3a3;; /* Transition to a light blue */
+    }
+}
+
+.roof {
+    width: 0; /* No width needed */
+    height: 0; /* No height needed */
+    border-left: 150px solid transparent; /* Adjust size as needed */
+    border-right: 150px solid transparent; /* Adjust size as needed */
+    border-bottom: 30px solid #dddddd; /* Bottom border (roof color) */
+    margin-top: -40px; /* Pull up to overlap with the top of the building */
+}
+
+.top {
+    background-color: #c7c7c7;
+    color: #000000; /* Black text color */
+    width: 100%; /* Full width */
+    height: 100px; /* Set height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+.col-box {
+    display: flex;
+    justify-content: space-evenly; /* Evenly distribute columns */
+    background-color: #505050;
+    width: 100%;
+    margin: 10px 0; /* Vertical margin */
+}
+
+.col {
+    width: 20px; /* Fixed width for columns */
+    height: 100px; /* Fixed height for columns */
+    background-color: #b0b0b0; /* Column color */
+}
+
+.converter-box {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    width: 100%;
+    margin: 10px 0; /* Vertical margin */
+}
+
+.converter-box input {
+    width: 80%; /* Input width */
+    padding: 10px; /* Internal padding */
+    margin-bottom: 10px; /* Spacing below input */
+    border: 2px solid #505050; /* Border color */
+    border-radius: 3px; /* Rounded corners */
+    box-sizing: border-box;
+    font-size: 2em;
+}
+
+.converter-box button {
+    padding: 10px 20px; /* Internal padding */
+    background-color: #ff0000; /* Button background color */
+    color: #ffee00; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 3px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em;
+}
+
+.converter-box button:hover {
+    background-color: #920000; /* Darken button color on hover */
+}
+
+.bottom {
+    height: 20px; /* Height for the bottom section */
+    width: 100%; /* Full width */
+    background-color: #c0c0c0; /* Bottom color */
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+}
+
+#output {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: #000000;
+    background-color: #ccc;
+}
+
+#number {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: #000000;
+    background-color: #ccc;
+}
