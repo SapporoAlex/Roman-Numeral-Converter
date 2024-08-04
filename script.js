@@ -3,7 +3,11 @@ const convertButton = document.getElementById("convert-btn");
 const output = document.getElementById("output");
 
 convertButton.addEventListener("click", convert)
-
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    convert();
+  }
+});
 
 function convertToRoman(number) {
   let convertedRomanNumerals = "";
@@ -76,6 +80,15 @@ const parsedNumberValue = parseInt(numberValue, 10);
 
 } else if (parsedNumberValue < 0) {
   output.innerText = "Please enter a number greater than or equal to 1";
+
+} else if (number.value.toLowerCase() === "hello") {
+  output.innerText = "Greetings friend!";
+
+} else if (number.value.toLowerCase() === "mario") {
+  output.innerText = "It'sa me!";
+
+} else if (number.value.toLowerCase() === "caesar") {
+  output.innerText = "All hail!";
 
 } else if (parsedNumberValue >= 4000) {
   output.innerText = "Please enter a number less than or equal to 3999";
