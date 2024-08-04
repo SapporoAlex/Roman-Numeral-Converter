@@ -111,10 +111,10 @@ body {
         top: -100px; /* Start off-screen above the viewport */
         background: rgb(255, 254, 198);
     }
-    15% {
+    45% {
         background: rgb(255, 254, 198);
     }
-    25% {
+    55% {
         background: rgb(255, 145, 145);
     }
     100% {
