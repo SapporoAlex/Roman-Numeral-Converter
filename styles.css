@@ -15,10 +15,10 @@ body {
 
 @keyframes fadeBackground {
     0% {
-        background-color: #3aa6ff; /* Transition back to light blue */
+        background-color: #67bbff; /* Transition back to light blue */
     }
     50% {
-        background-color: #003f91; /* Transition to a light blue */
+        background-color: #0063e4; /* Transition to a light blue */
     }
     55% {
         background-color: #ff7e06; /* Transition to a light blue */
@@ -27,7 +27,7 @@ body {
         background-color: #000000; /* Return to start color */
     }
     100% {
-        background-color: #3aa6ff; /* Transition to a light blue */
+        background-color: #67bbff; /* Transition to a light blue */
     }
 }
 
