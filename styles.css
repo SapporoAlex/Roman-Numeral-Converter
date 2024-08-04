@@ -15,10 +15,10 @@ body {
 
 @keyframes fadeBackground {
     0% {
-        background-color: #67bbff; /* Transition back to light blue */
+        background-color: #bae0ff; /* Transition back to light blue */
     }
     50% {
-        background-color: #0063e4; /* Transition to a light blue */
+        background-color: #61a6ff; /* Transition to a light blue */
     }
     55% {
         background-color: #ff7e06; /* Transition to a light blue */
@@ -27,7 +27,7 @@ body {
         background-color: #000000; /* Return to start color */
     }
     100% {
-        background-color: #67bbff; /* Transition to a light blue */
+        background-color: #bae0ff; /* Transition to a light blue */
     }
 }
 
@@ -66,7 +66,7 @@ body {
 .cloud {
     width: 140px; /* Set the width of the cloud */
     height: 60px; /* Set the height of the cloud */
-    background: white;
+    background: #ffffffcc;
     border-radius: 50%; /* Make it round */
     position: absolute;
     top: 50px; /* Adjust the position as needed */
@@ -111,14 +111,14 @@ body {
         top: -100px; /* Start off-screen above the viewport */
         background: rgb(255, 254, 198);
     }
-    35% {
+    15% {
         background: rgb(255, 254, 198);
     }
-    45% {
+    25% {
         background: rgb(255, 145, 145);
     }
     100% {
-        right: 50%; /* End position horizontally */
+        right: 25%; /* End position horizontally */
         top: 200%; /* Move to the bottom of the viewport */
         background: rgb(255, 254, 198);
         transform: translateX(-50%); /* Adjust alignment if needed */
