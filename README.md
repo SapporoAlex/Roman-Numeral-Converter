@@ -1,7 +1,7 @@
 # Roman Numeral Converter with Dynamic Landscape Animation
 This project is a Roman numeral converter application that features a dynamic CSS animation background, creating a landscape scene with a day-night cycle.
 
-<a href="https://sapporoalex.github.io/Roman-Numeral-Converter/">Roman Numeral Converter</a>
+<a href="https://sapporoalex.github.io/Roman-Numeral-Converter/" target="_blank">Roman Numeral Converter</a>
 <img src="https://github.com/SapporoAlex/Roman-Numeral-Converter/blob/main/preview.gif" width="50vw" height="auto">
 
 ## Features
