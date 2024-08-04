@@ -5,7 +5,7 @@ This project is a Roman numeral converter application that features a dynamic CS
 
 ## Features
 
-- **Roman Numeral Conversion**: Convert numbers to Roman numerals and vice versa.
+- **Roman Numeral Conversion**: Convert numbers to Roman numerals.
 - **Dynamic Landscape Animation**: A visually appealing background that transitions through a day-night cycle with moving elements such as the sun and clouds.
 - **Responsive Design**: Adjusts for different screen sizes.
 
