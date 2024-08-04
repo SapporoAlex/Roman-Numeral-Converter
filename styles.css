@@ -61,7 +61,7 @@ body {
 }
 
 .cloud {
-    width: 100px; /* Set the width of the cloud */
+    width: 140px; /* Set the width of the cloud */
     height: 60px; /* Set the height of the cloud */
     background: white;
     border-radius: 50%; /* Make it round */
@@ -465,4 +465,38 @@ body {
     font-size: 2em;
     color: #000000;
     background-color: #ccc;
+}
+
+@media (max-width: 800px) {
+    #title {
+        font-size: 1.8em;
+    }
+
+    .tree1 {
+        top: 480px;
+    }
+
+    .tree2 {
+        top: 500px;
+    }
+
+    .tree3 {
+        top: 490px;
+    }
+
+    .tree4 {
+        top: 475px;
+    }
+
+    .mountain1 {
+        position: absolute;
+        top: 200px;
+        left: -30%;
+        width: 0; /* No width needed */
+        height: 0; /* No height needed */
+        border-left: 170px solid transparent; /* Left border */
+        border-right: 150px solid transparent; /* Right border */
+        border-bottom: 100px solid #8B4513; /* Bottom border (mountain color) */
+        animation: fadeMountain 100s linear infinite;
+    }
 }
